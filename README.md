@@ -33,6 +33,7 @@
 这里将生成一个新的文件cert.csr，即一个证书请求文件，你可以拿着这个文件去数字证书颁发机构（即CA）申请一个数字证书。CA会给你一个新的文件cacert.pem，那才是你的数字证书。
 
 如果是自己做测试，那么证书的申请机构和颁发机构都是自己。就可以用下面这个命令来生成证书：
+
 `openssl req -new -x509 -key privkey.pem -out cacert.pem -days 1095`
 
 这个命令将用上面生成的密钥privkey.pem生成一个数字证书cacert.pem
