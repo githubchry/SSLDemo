@@ -8,18 +8,22 @@
 搬运：http://zhoulifa.bokee.com/6079257.html
 
 首先得安装OpenSSL软件包openssl，安装了这个软件包之后，我们可以做这些事情：
+```
   o  Creation of RSA, DH and DSA Key Parameters # 创建密钥 key
   o  Creation of X.509 Certificates, CSRs and CRLs # 创建证书
   o  Calculation of Message Digests                # 
   o  Encryption and Decryption with Ciphers # 加密、解密
   o  SSL/TLS Client and Server Tests        # SSL 服务器端/客户端测试
   o  Handling of S/MIME signed or encrypted Mail  # 处理签名或加密了的邮件
+```
 
 ### 1、生成RSA密钥的方法
 `openssl genrsa -des3 -out privkey.pem 2048`
+
 这个命令会生成一个2048位的密钥，同时有一个des3方法加密的密码，如果你不想要每次都输入密码，可以改成：
 
 `openssl genrsa -out privkey.pem 2048`
+
 建议用2048位密钥，少于此可能会不安全或很快将不安全。
 
 ### 2、生成一个证书请求
