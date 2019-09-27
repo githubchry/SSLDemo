@@ -3,8 +3,10 @@
 
 代码搬运：https://my.oschina.net/jjyuangu/blog/3007805
 
+
 ## 生成RSA私钥和公钥
 搬运：http://zhoulifa.bokee.com/6079257.html
+
 首先得安装OpenSSL软件包openssl，安装了这个软件包之后，我们可以做这些事情：
   o  Creation of RSA, DH and DSA Key Parameters # 创建密钥 key
   o  Creation of X.509 Certificates, CSRs and CRLs # 创建证书
@@ -34,8 +36,11 @@
 
 ## 编译
 `gcc -Wall ssl-client.c -o client -lssl -lcrypto`
+
 `gcc -Wall ssl-server.c -o server -lssl -lcrypto`
+
 `g++ -Wall main.cpp Socket.cpp -o server_nonblock -lssl -lcrypto`
+
 
 ## 运行
 `./server 20190 1 127.0.0.1 cacert.pem privkey.pem`
